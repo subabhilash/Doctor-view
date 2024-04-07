@@ -9,6 +9,8 @@ packages = [{include = "repl_nix_doctor_view"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
+mysql-connector-python = "^8.3.0"
+pandas = "^2.2.1"
 
 
 [build-system]
