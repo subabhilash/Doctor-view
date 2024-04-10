@@ -20,7 +20,7 @@
         }
 
         .login-form {
-            background-color: #8a2be2;
+            background-color: #5BBCFF;
             color: white;
             padding: 50px;
             width: 50%;
@@ -32,10 +32,11 @@
             width: 50%;
         }
 
-        input[type=email], input[type=password] {
-            width: calc(100% - 20px);
+        input[type=text], input[type=password] {
+            width: 100%;
             padding: 10px;
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
+            box-sizing: border-box; /* Ensure padding is included in the width */
         }
 
         .remember-me {
@@ -58,15 +59,15 @@
 <body>
     <div class="login-container">
         <div class="login-form">
+          <form method="post">
             <h1>Smart Doctor</h1>
             <p>Welcome to our App</p>
-          <input type="text" id="username" name="username" required><br>
-          <input type="password" id="password" name="password" required><br>
-            <div class="remember-me">
-                <input type="checkbox" id="remember">
-                <label for="remember">Remember me</label>
-            </div>
-          <button type="submit">Login</button>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+          </form>
         </div>
         <div class="image-section"></div>
     </div>
